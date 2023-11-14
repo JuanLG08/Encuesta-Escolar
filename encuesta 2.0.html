@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Escolar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Encuesta Escolar</h1>
+
+    <form action="procesar_encuesta.php" method="post">
+        <label for="pregunta1">Pregunta 1: ¿Cómo calificaría en general el colegio?</label>
+        <input type="radio" name="pregunta1" value="excelente"> Excelente
+        <input type="radio" name="pregunta1" value="bueno"> Bueno
+        <input type="radio" name="pregunta1" value="regular"> Regular
+        <input type="radio" name="pregunta1" value="malo"> Malo
+
+        <br>
+
+        <label for="pregunta2">Pregunta 2: ¿Qué propuestas crees que lo mejorarían?</label>
+        <textarea name="pregunta2" rows="4" cols="50"></textarea>
+
+        <br>
+
+        <label for="pregunta3">Pregunta 3: ¿Es Ignacio tonto?</label>
+        <input type="radio" name="pregunta3" value="si"> Sí
+        <input type="radio" name="pregunta3" value="no"> No
+
+        <br>
+
+        <button type="submit">Enviar Encuesta</button>
+    </form>
+
+</body>
+</html>
